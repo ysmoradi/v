@@ -1,14 +1,14 @@
 # راهنمایی
 
-هر سوالی داشتید [اینجا](https://github.com/ysmoradi/Neko/issues/new) مطرح کنید
+اینجا فایل‌ها و توضیحات لازم برای پیأده‌سازی راحت‌تر این [توییت](https://twitter.com/ysmoradi/status/1718224456433250589) قرار داده شده (اگه دسترسی به توییتر ندارید، میتونید آخر سر توییت رو بخونید و سوالی داشتید اونجا بپرسید)
 
-اینجا فایل‌ها و توضیحات لازم برای پیأده‌سازی راحت‌تر این [توییت](https://twitter.com/ysmoradi/status/1718224456433250589) قرار داده شده.
+اگر اصلا توییتر ندارید، [اینجا](https://github.com/ysmoradi/Neko/issues/new) هم میتونید سوالتون رو بپرسید
 
 # برای Android
 
 برنامه nekobox رو [دانلود](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases) کنید
 
-کانفیگ [nekobox.json](https://github.com/ysmoradi/Neko/releases/latest/download/nekobox.json) رو هم میتونید دانلود و تو برنامه Nekobox تو منوی Settings، تب Backup از دکمه Import داخل برنامه کنید و Skype و Google Meet و... عمل از VPN خارج میشن با این کار
+کانفیگ [nekobox.json](https://github.com/ysmoradi/Neko/releases/latest/download/nekobox.json) رو هم میتونید دانلود و تو برنامه Nekobox تو منوی Settings، تب Backup از دکمه Import داخل برنامه کنید و Skype و Google Meet و... عمل از VPN خارج میشن
 
 تو هر دو یه subscription پیش‌فرض با چند تا کانفیگ وجود داره، میتونید اون رو با عزیزانتون هم به اشتراک بگذارید، بالاخص روی ایرانسل جوابه!
 
@@ -28,8 +28,6 @@
 برنامه رو Run as admin کنید و TUN Mode‌رو تیک بزنید. برنامه‌هایی که VPN لازم ندارن مثل Skype‌ از VPN‌ رد نخواهند شد. میتونید اسم سایر برنامه‌ها رو در Preferences در قسمت TUN settings وارد کنید. (سوالی داشتید از لینک اول راهنما بپرسید)
 
 تو هر دو یه subscription پیش‌فرض با چند تا کانفیگ وجود داره، میتونید اون رو با عزیزانتون هم به اشتراک بگذارید، بالاخص روی ایرانسل جوابه!
-
-طبیعیه که مثل v2rayN و v2rayNG میتونید کانفیگ‌ها و Subscriptionهای خودتون رو هم اضافه کنید (تو قسمت Groups)، منتهی این برنامه‌های nekobox و nekoray از معادل‌های Android, Windows, macOS, Linux ای خودشون خیلی خیلی بهترن!
 
 طبیعیه که مثل v2rayN میتونید کانفیگ‌ها و Subscriptionهای خودتون رو هم اضافه کنید (تو قسمت Groups)، منتهی این nekoray از معادل‌های ویندوزی خودش به مراتب بهتره!
 
