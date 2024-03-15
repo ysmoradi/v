@@ -1,0 +1,1013 @@
+[{
+    "remarks": "74-hz-germany-nuremberg3-vless-ws-cf-custom-long-mux",
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "4e68665f-fbba-4407-9a3f-d45a8b361fce",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "123456789_123456789_123456789_123456789_123456789_123456789_123.BITsERvIces.cOMpaNY",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "123456789_123456789_123456789_123456789_123456789_123456789_123.BITsERvIces.cOMpaNY"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255,
+            "tcpNoDelay": true
+          }
+        },
+        "mux": {
+          "enabled": true,
+          "concurrency": 8,
+          "xudpConcurrency": 8,
+          "xudpProxyUDP443": "reject"
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "AsIs",
+          "fragment": {
+            "packets": "tlshello",
+            "length": "150-200",
+            "interval": "1-2"
+          }
+        },
+        "streamSettings": {
+          "sockopt": {
+            "tcpNoDelay": true,
+            "tcpKeepAliveIdle": 100
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  },{
+    "remarks": "75-hz-germany-nuremberg3-vless-ws-cf-custom-long",
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "dfcc9033-94ff-4c6e-86b5-5919cba59e67",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "123456789_123456789_123456789_123456789_123456789_123456789_123.BITsERvIces.cOMpaNY",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "123456789_123456789_123456789_123456789_123456789_123456789_123.BITsERvIces.cOMpaNY"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255,
+            "tcpNoDelay": true
+          }
+        },
+        "mux": {
+          "enabled": false,
+          "concurrency": -1
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "AsIs",
+          "fragment": {
+            "packets": "tlshello",
+            "length": "150-200",
+            "interval": "1-2"
+          }
+        },
+        "streamSettings": {
+          "sockopt": {
+            "tcpNoDelay": true,
+            "tcpKeepAliveIdle": 100
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  },{
+    "remarks": "70-hz-germany-nuremberg3-vless-ws-cf-custom-simple",
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "8616578e-d613-49a8-bceb-003f5b7bfadc",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "s3.BitserVICes.CompAnY",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "s3.BitserVICes.CompAnY"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255,
+            "tcpNoDelay": true
+          }
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "AsIs",
+          "fragment": {
+            "packets": "tlshello",
+            "length": "10-20",
+            "interval": "10-20"
+          }
+        },
+        "streamSettings": {
+          "sockopt": {
+            "tcpNoDelay": true,
+            "tcpKeepAliveIdle": 100
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5465425548310166497",
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:cn"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5425034033205580637",
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private",
+            "geoip:cn",
+            "geoip:ir"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  },{
+    "remarks": "72-hz-germany-nuremberg3-vless-ws-cf-custom-mux",
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "99cc0ee4-f786-4249-989c-006501c30f48",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "s3.BItserviCES.ComPAny",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "s3.BItserviCES.ComPAny"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 100,
+            "mark": 255,
+            "tcpNoDelay": true
+          }
+        },
+        "mux": {
+          "enabled": true,
+          "concurrency": 8,
+          "xudpConcurrency": 8,
+          "xudpProxyUDP443": "reject"
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "AsIs",
+          "fragment": {
+            "packets": "tlshello",
+            "length": "10-20",
+            "interval": "10-20"
+          }
+        },
+        "streamSettings": {
+          "sockopt": {
+            "tcpNoDelay": true,
+            "tcpKeepAliveIdle": 100
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5465425548310166497",
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:cn"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5425034033205580637",
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private",
+            "geoip:cn",
+            "geoip:ir"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  },{
+    "remarks": "71-hz-germany-nuremberg3-vless-ws-cf-custom-long",
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "f90d8208-3310-44d7-8808-f654add4b862",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "s3.BitserVICes.CompAnY",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "s3.BitserVICes.CompAnY"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment",
+            "tcpKeepAliveIdle": 200,
+            "mark": 255,
+            "tcpNoDelay": true
+          }
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "domainStrategy": "AsIs",
+          "fragment": {
+            "packets": "tlshello",
+            "length": "80-100",
+            "interval": "15-25"
+          }
+        },
+        "streamSettings": {
+          "sockopt": {
+            "tcpNoDelay": true,
+            "tcpKeepAliveIdle": 100
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5465425548310166497",
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:cn"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5425034033205580637",
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private",
+            "geoip:cn",
+            "geoip:ir"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  },{
+    "remarks": "73-hz-germany-nuremberg3-vless-ws-cf-custom-dns-ir",
+    "dns": {
+      "tag": "dns",
+      "hosts": {
+        "dns.403.online": [
+          "10.202.10.202",
+          "10.202.10.102"
+        ],
+        "free.shecan.ir": [
+          "178.22.122.100",
+          "185.51.200.2"
+        ]
+      },
+      "servers": [
+        "https://free.shecan.ir/dns-query",
+        "https://dns.403.online/dns-query",
+        "10.202.10.11",
+        "10.202.10.10",
+        "85.15.1.15",
+        "85.15.1.14"
+      ]
+    },
+    "log": {
+      "access": "",
+      "error": "",
+      "loglevel": "warning"
+    },
+    "inbounds": [
+      {
+        "tag": "socks",
+        "port": 10808,
+        "listen": "127.0.0.1",
+        "protocol": "socks",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      },
+      {
+        "tag": "http",
+        "port": 10809,
+        "listen": "127.0.0.1",
+        "protocol": "http",
+        "sniffing": {
+          "enabled": true,
+          "destOverride": [
+            "http",
+            "tls"
+          ],
+          "routeOnly": false
+        },
+        "settings": {
+          "auth": "noauth",
+          "udp": true,
+          "allowTransparent": false
+        }
+      }
+    ],
+    "outbounds": [
+      {
+        "tag": "proxy",
+        "protocol": "vless",
+        "settings": {
+          "vnext": [
+            {
+              "address": "zula.ir",
+              "port": 443,
+              "users": [
+                {
+                  "id": "ac587d4e-9cf2-49a1-b2e0-af9723c39ac6",
+                  "alterId": 0,
+                  "email": "t@t.tt",
+                  "security": "auto",
+                  "encryption": "none",
+                  "flow": ""
+                }
+              ]
+            }
+          ]
+        },
+        "streamSettings": {
+          "network": "ws",
+          "security": "tls",
+          "tlsSettings": {
+            "allowInsecure": true,
+            "serverName": "s3.BitserVICes.CompAnY",
+            "alpn": [
+              "h2",
+              "http/1.1"
+            ],
+            "fingerprint": "chrome",
+            "show": false
+          },
+          "wsSettings": {
+            "path": "/ws/8080",
+            "headers": {
+              "Host": "s3.BitserVICes.CompAnY"
+            }
+          },
+          "sockopt": {
+            "dialerProxy": "fragment"
+          }
+        }
+      },
+      {
+        "tag": "fragment",
+        "protocol": "freedom",
+        "settings": {
+          "fragment": {
+            "packets": "tlshello",
+            "length": "5-10",
+            "interval": "5-10"
+          }
+        }
+      },
+      {
+        "tag": "direct",
+        "protocol": "freedom",
+        "settings": {}
+      },
+      {
+        "tag": "block",
+        "protocol": "blackhole",
+        "settings": {
+          "response": {
+            "type": "http"
+          }
+        }
+      },
+      {
+        "protocol": "dns",
+        "sockopt": {
+          "dialerProxy": "fragment"
+        },
+        "tag": "dns-out"
+      }
+    ],
+    "routing": {
+      "domainStrategy": "AsIs",
+      "rules": [
+        {
+          "type": "field",
+          "inboundTag": [
+            "api"
+          ],
+          "outboundTag": "api",
+          "enabled": true
+        },
+        {
+          "id": "5465425548310166497",
+          "type": "field",
+          "outboundTag": "direct",
+          "domain": [
+            "domain:ir",
+            "geosite:cn"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5425034033205580637",
+          "type": "field",
+          "outboundTag": "direct",
+          "ip": [
+            "geoip:private",
+            "geoip:cn",
+            "geoip:ir"
+          ],
+          "enabled": true
+        },
+        {
+          "id": "5627785659655799759",
+          "type": "field",
+          "port": "0-65535",
+          "outboundTag": "proxy",
+          "enabled": true
+        }
+      ]
+    }
+  }]
